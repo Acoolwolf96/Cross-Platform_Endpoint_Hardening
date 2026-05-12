@@ -120,7 +120,7 @@ remediate: |
 ### Installation
 
 ```bash
-git clone https://github.com/your-org/endpoint-hardening-agent.git
+git clone https://github.com/your-org/endpoint-hardening.git
 cd endpoint-hardening-agent
 pip install -r requirements.txt
 make build

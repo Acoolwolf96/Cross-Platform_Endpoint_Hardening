@@ -1,0 +1,38 @@
+{
+    "total_rules": 3,
+    "compliant": 1,
+    "non_compliant": 2,
+    "timestamp": "2025-07-17T12:54:56.808912Z",
+    "results": [
+        {
+            "id": "WIN-1",
+            "title": "Disable Remote Desktop",
+            "type": "registry_key",
+            "severity": "high",
+            "category": "remote-access",
+            "status": "compliant",
+            "expected": "1",
+            "actual": "1"
+        },
+        {
+            "id": "WIN-2",
+            "title": "Ensure Windows Update service is enabled",
+            "type": "service_status",
+            "severity": "medium",
+            "category": "services",
+            "status": "drift",
+            "expected": "running",
+            "actual": "stopped"
+        },
+        {
+            "id": "CUSTOM-WIN-1",
+            "title": "Custom check for password complexity",
+            "type": "custom_script",
+            "severity": "high",
+            "category": "auth",
+            "status": "drift",
+            "expected": null,
+            "actual": null
+        }
+    ]
+}

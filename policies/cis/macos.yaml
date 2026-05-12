@@ -1,0 +1,22 @@
+policy_name: "macOS CIS Baseline"
+version: "1.0"
+os: "darwin"
+
+rules:
+  - id: "MACOS-1"
+    title: "Disable remote Apple events"
+    type: "custom_script"
+    os: "darwin"
+    severity: "medium"
+    category: "remote-access"
+    script_eval: "scripts/custom/macos_disable_appleevents_check.sh"
+    script_fix: "scripts/custom/macos_disable_appleevents_fix.sh"
+
+  - id: "MACOS-2"
+    title: "Set permissions on /etc/passwd"
+    type: "file_permission"
+    os: "darwin"
+    target: "/etc/passwd"
+    expected: "644"
+    severity: "low"
+    category: "filesystem"
